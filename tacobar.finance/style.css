@@ -1,0 +1,146 @@
+@font-face {
+  font-family: FredokaOne;
+  src: url("./Fonts/FredokaOne-Regular.ttf");
+}
+@font-face {
+  font-family: Inter-Variable;
+  src: url("./Fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+body {
+  background-color: #ffa756;
+  font-family: Inter-Variable;
+}
+
+.rectangle3 {
+  max-width: 590px;
+
+  background: linear-gradient(180deg, #ffcda9 0%, #ffc38c 100%);
+  box-shadow: 0px 92px 66px rgba(225, 139, 59, 0.78);
+  border-radius: 16px;
+}
+
+.frame3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 10px;
+
+  background: #ffe6ce;
+  border-radius: 43px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.fredoka {
+  font-family: FredokaOne;
+}
+
+.inter {
+  font-family: Inter-Variable;
+}
+
+.button-green {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 10px;
+  border: none;
+
+  background: linear-gradient(91.19deg, #1a9a64 3.32%, #037832 99.76%);
+  border-radius: 8px;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  color: white;
+}
+
+.button-black {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 10px;
+  border: none;
+
+  background: #161729;
+  border-radius: 8px;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  color: white;
+}
+
+.rectangle4 {
+  max-width: 1220px;
+  background: #ffb876;
+  border-radius: 24px;
+}
+
+.rectangle5 {
+  position: relative;
+  background-color: #ffb46f;
+}
+
+.rectangle6 {
+  max-width: 800px;
+
+  background: linear-gradient(180deg, #ffcda9 0%, #ffc38c 100%);
+  box-shadow: 0px 92px 66px rgba(225, 139, 59, 0.78);
+  border-radius: 16px;
+}
+
+.weight-700 {
+  font-weight: 700;
+}
+
+.btn-connect {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 2em;
+  gap: 10px;
+
+  background: #161729;
+  box-shadow: 0px 18px 28px rgba(209, 118, 33, 0.95);
+  border-radius: 8px;
+  color: white;
+  border: none;
+}
+
+.img-pattern {
+  position: absolute;
+  width: 60%;
+  top: 0;
+  left: 0;
+}
+
+.img-hat {
+  position: absolute;
+  z-index: -1;
+  top: 24%;
+  right: 0%;
+  width: 30%;
+}
+
+@media only screen and (max-width: 600px) {
+  .img-hat {
+    position: absolute;
+    z-index: -1;
+    right: -9%;
+    top: 43%;
+    width: 30%;
+  }
+}

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Yummy Tacos, Yummy rewards!</title>
+  </head>
+  <body class="text-center px-3">
+    <div class="w-100 m-auto">
+      <div class="w-100 d-flex flex-row justify-content-end p-2 p-sm-4">
+        <button class="btn-connect" id="btn-connect">
+          <img src="./assets/Icons/arrow-up-right.svg" alt="" srcset="" />
+          Connect
+        </button>
+        <button
+          style="display: none"
+          class="btn-connect bg-danger"
+          id="btn-disconnect"
+        >
+          <img src="./assets/Icons/arrow-up-right.svg" alt="" srcset="" />
+          Disconnect
+        </button>
+      </div>
+
+      <img
+        src="./assets/Illustrations/pattern.svg"
+        class="img-pattern"
+        alt=""
+      />
+
+      <img src="./assets/Illustrations/hat.svg" class="img-hat" />
+
+      <div class="frame5">
+        <img src="./assets/logo.svg" alt="logo" width="164" height="164" />
+        <p class="fredoka text-uppercase h1">
+          <span class="text-warning">The</span> Taco Bar
+        </p>
+        <p>
+          Yummy sustainable tacos. Earn 0.25-1.5% daily. Add Salsa to spice up your rewards.
+        </p>
+      </div>
+      <div class="rectangle3 m-auto bg-primary p-5">
+        <div class="d-flex flex-column">
+          <div
+            class="d-flex flex-row justify-content-between align-items-center mb-3"
+          >
+            <span>Contract</span
+            ><span class="frame3">
+              <span id="contract-balance">0</span> BUSD
+            </span>
+          </div>
+          <div
+            class="d-flex flex-row justify-content-between align-items-center mb-3"
+          >
+            <span>Wallet</span
+            ><span class="frame3">
+              <span id="account-balance">0</span> BUSD
+            </span>
+          </div>
+          <!-- <div
+            class="d-flex flex-row justify-content-between align-items-center mb-3"
+          >
+            <span>Your Tacos</span
+            ><span class="frame3">
+              <span id="token-balance">0</span> TACOS</span
+            >
+          </div> -->
+        </div>
+        <div>
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              dir="rtl"
+              class="form-control"
+              placeholder="0"
+              aria-label="0"
+              aria-describedby="basic-addon2"
+            />
+            <span class="input-group-text" id="basic-addon2">BUSD</span>
+          </div>
+          <div class="d-grid">
+            <button class="button-green">
+              <img src="./assets/Icons/fire.svg" alt="fire" /> COOK TACOS
+            </button>
+          </div>
+
+          <div
+            class="d-flex flex-row justify-content-between align-items-center my-3"
+          >
+            <span>Your Rewards</span
+            ><span class="frame3"> <span id="rewards">0</span> BUSD</span>
+          </div>
+          <div class="row row-cols-1 row-cols-sm-2 g-2">
+            <div class="col d-grid">
+              <button class="button-black">
+                <img src="./assets/Icons/fire.svg" /> RECOOK
+              </button>
+            </div>
+            <div class="col d-grid">
+              <button class="button-black">
+                <img src="./assets/Icons/eat.svg" /> EAT TACOS
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div
+        class="d-flex flex-column justify-content-center p-3 bg-dark text-light m-3"
+      >
+        <div>Cart will be full in</div>
+        <div>44h:33m:22s</div>
+        <div>Compound Count: 5 times</div>
+        <button class="btn btn-primary my-2">
+          Harvest Crops in 00h:58m:39s
+        </button>
+        <button class="btn btn-primary my-2">Hire more farmers (+12.5%)</button>
+        <div>Time until next hire bonus is activated</div>
+        <div>08h:58m:39s</div>
+      </div> -->
+      <div style="max-width: 300px; margin: 3em auto 0 auto">
+        <img
+          style="width: 100%"
+          src="./assets/Illustrations/salsa.svg"
+          alt="salsa"
+          srcset=""
+        />
+      </div>
+      <div class="m-auto p-5" style="max-width: 590px">
+        <p class="h1 fredoka text-uppercase">Add Salsa to your tacos</p>
+        <div class="input-group mb-3">
+          <input
+            type="number"
+            min="0"
+            step="0.1"
+            dir="rtl"
+            class="form-control"
+            placeholder="0"
+            aria-label="0"
+            aria-describedby="basic-addon2"
+            id="input-add-salsa"
+          />
+          <span class="input-group-text" id="basic-addon2">BUSD</span>
+        </div>
+        <div class="d-grid">
+          <button class="button-green" id="add-salsa">
+            <img src="./assets/Icons/add-salsa.svg" /> ADD SALSA
+          </button>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-sm-3 g-3">
+        <div class="col">
+          <div
+            class="d-flex flex-row justify-content-between align-items-center"
+          >
+            Total Salsa Invested <span class="frame3">5</span>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="d-flex flex-row justify-content-between align-items-center"
+          >
+            Salsa Pool Share<span class="frame3">0.003%</span>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="d-flex flex-row justify-content-between align-items-center"
+          >
+            Total Salsa Returns<span class="frame3">0.5</span>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="rectangle4 p-5 m-auto">
+        <div
+          class="d-flex flex-row justify-content-between align-items-center flex-wrap"
+        >
+          <div class="h1 fredoka">Paquena Loteria(tiny lottery)</div>
+          <div class="d-grid">
+            <button class="button-green m-auto">
+              <img src="./assets/coupon.png" /> BUY A TICKET
+            </button>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 mt-5">
+          <div class="col">
+            <p class="h4">Description of how it works:</p>
+            <ul>
+              <li>Buy a lotto ticket for 10 BUSD</li>
+              <li>When 10 tickets are drawn the lotto happens</li>
+              <li>Winner picked randomly and gets 50 BUSD sent to their wallet</li>
+              <li>50 BUSD stays in the contract</li>
+            </ul>
+          </div>
+          <div class="col">
+            <div class="d-flex flex-column">
+              <div
+                class="d-flex flex-row justify-content-between align-items-center mb-3"
+              >
+                <span>Tickets left till next draw</span
+                ><span class="frame3"> <span>0</span> </span>
+              </div>
+              <div
+                class="d-flex flex-row justify-content-between align-items-center mb-3"
+              >
+                <span>Total sent to contract</span
+                ><span class="frame3"> <span>0</span> </span>
+              </div>
+              <div
+                class="d-flex flex-row justify-content-between align-items-center mb-3"
+              >
+                <span>Last winner address</span
+                ><span class="frame3"> <span>0</span> </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rectangle5 mt-5 p-5">
+        <div class="d-flex flex-column">
+          <p class="h1 text-uppercase fredoka">
+            <span class="text-warning">The</span> Spicy Details
+          </p>
+          <img
+            src="./assets/Images/chili.png"
+            style="position: absolute; top: 10%; left: 10%"
+            width="20%"
+            alt=""
+            srcset=""
+          />
+
+          <div
+            class="d-flex flex-row justify-content-evenly align-items-center flex-wrap"
+          >
+            <!-- <p class="order-2 order-sm-1">
+              APR <span class="weight-700">2,92%</span>
+            </p> -->
+            <img
+              src="./assets/Images/plate.png"
+              class="m-auto order-1 order-sm-2"
+              width="312"
+              alt=""
+              srcset=""
+            />
+            <div class="order-3 order-sm-3">
+              <p>Daily Return <span class="weight-700">0.25-1.5%</span></p>
+              <p>Dev Fee <span class="weight-700">3% Tacos Deposit, 1% Salsa Deposit, 1/2% salsa returns</span></p>
+            </div>
+          </div>
+
+          <img
+            src="./assets/Images/flower.png"
+            style="position: absolute; left: 10%; bottom: 10%"
+            width="10%"
+            alt=""
+            srcset=""
+          />
+          <img
+            src="./assets//Images/chili-rtl.png"
+            style="position: absolute; right: 10%; bottom: 10%"
+            width="10%"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="container-sm rectangle6 mt-5 p-5">
+        <p class="h1 fredoka text-uppercase">Referral Link</p>
+        <input type="text" class="form-control" />
+        <p class="mt-3 m-auto" style="width: 70%">
+          Earn 3% of the BUSD goes to your priciple used to cook tacos from anyone who uses your
+          referral link
+        </p>
+      </div>
+      <hr class="my-5" />
+      <div
+        class="d-flex flex-row justify-content-between align-items-center p-5"
+      >
+        <div class="d-flex flex-row align-items-center">
+          <img src="./assets/logo.svg" width="63" alt="logo" srcset="" />
+          <p class="h2 fredoka text-uppercase">
+            <span class="text-warning">The</span> taco bar
+          </p>
+        </div>
+        <div>
+          <img src="./assets/Icons/bscscan.png" alt="" />
+          <img src="./assets/Icons/telegram.png" alt="" srcset="" />
+          <img src="./assets/Icons/twitter.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Connect Wallet</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>You need to connect wallet to continue</p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/web3@1.2.11/dist/web3.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/web3modal@1.9.0/dist/index.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/@walletconnect/web3-provider@1.2.1/dist/umd/index.min.js"
+    ></script>
+    <script src="./contract_info.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
