@@ -132,7 +132,7 @@ contract AVAX_Crops {
 
     function ADDSALSA_ProfitDeposit() public payable{
         require(msg.sender==salsaInvestor, "Not ADDSALSA Investor");
-        require(contractStarted, "Contrat not yet Started.");
+        require(contractStarted, "Contract not yet Started.");
         uint256 amount = msg.value;
         uint256 fee = amount.div(200);
         payable(owner).transfer(fee);
